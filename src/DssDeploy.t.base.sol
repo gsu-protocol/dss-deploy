@@ -267,7 +267,7 @@ contract DssDeployTestBase is DSTest, ProxyActions {
     Dog dog;
     Flapper flap;
     Flopper flop;
-    Dai dai;
+    GSUCoin dai;
     DaiJoin daiJoin;
     Spotter spotter;
     Pot pot;
