@@ -35,7 +35,7 @@ import {Clipper} from "dss/clip.sol";
 import {LinearDecrease,
         StairstepExponentialDecrease,
         ExponentialDecrease} from "dss/abaci.sol";
-import {Dai} from "dss/dai.sol";
+import {GSUCoin} from "dss/dai.sol";
 import {Cure} from "dss/cure.sol";
 import {End} from "dss/end.sol";
 import {ESM} from "esm/ESM.sol";
@@ -83,8 +83,8 @@ contract DogFab {
 }
 
 contract DaiFab {
-    function newDai(address owner, uint chainId) public returns (Dai dai) {
-        dai = new Dai(chainId);
+    function newDai(address owner, uint chainId) public returns (GSUCoin dai) {
+        dai = new GSUCoin(chainId);
         dai.rely(owner);
         dai.deny(address(this));
     }
@@ -217,7 +217,7 @@ contract DssDeploy is DSAuth {
     Vow     public vow;
     Cat     public cat;
     Dog     public dog;
-    Dai     public dai;
+    GSUCoin     public dai;
     DaiJoin public daiJoin;
     Flapper public flap;
     Flopper public flop;
